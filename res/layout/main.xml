@@ -27,7 +27,7 @@
 				    android:text="See Schedules"
                         android:visibility="gone"/>
 			    
-				<com.rndapp.mtamap.TouchImageView
+				<com.rndapp.subway_lib.TouchImageView
 				    android:id="@+id/touchImg"
 					android:layout_width="wrap_content" 
 					android:layout_height="wrap_content" />
