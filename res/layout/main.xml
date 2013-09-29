@@ -5,6 +5,7 @@
 	android:gravity="center" android:orientation="vertical">
 	
 	<com.google.ads.AdView android:id="@+id/ad"
+                           android:visibility="gone"
 		android:layout_width="wrap_content" android:layout_height="wrap_content"
 		ads:adSize="BANNER" ads:adUnitId="a151a6b4967224d" ads:loadAdOnCreate="true"
 		ads:testDevices="TEST_EMULATOR,TEST_DEVICE_ID_GOES_HERE" />
@@ -27,7 +28,7 @@
 				    android:text="See Schedules"
                         android:visibility="gone"/>
 			    
-				<com.rndapp.subway_lib.TouchImageView
+				<com.rndapp.mtamap.MtaTouchImageView
 				    android:id="@+id/touchImg"
 					android:layout_width="wrap_content" 
 					android:layout_height="wrap_content" />
