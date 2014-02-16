@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    >
+    <TextView 
+        android:textAppearance="?android:attr/textAppearanceMedium" 
+        android:layout_marginLeft="20sp" 
+        android:layout_marginRight="20sp" 
+        android:layout_height="wrap_content"
+        android:text="Unfortunately, the MBTA does not offer schedules for the Green line. But as soon as they do, we'll make sure it gets to you!" 
+        android:layout_width="wrap_content"></TextView>
+</LinearLayout><!-- From: file:/Users/ell/development/mtamap/subway_lib/res/layout/notification.xml -->
