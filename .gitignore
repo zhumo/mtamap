@@ -1,9 +1,10 @@
-*.idea/*
-*.eml*
-*.iml*
+.idea/
+*.eml
+*.iml
 *DS_S*
 *~
-out/*
+out/
+build/
 
 /local.properties
 

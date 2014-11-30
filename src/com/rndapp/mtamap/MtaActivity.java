@@ -1,11 +1,16 @@
 package com.rndapp.mtamap;
 
+import com.rndapp.subway_lib.Line;
 import com.rndapp.subway_lib.MainActivity;
 
 import com.flurry.android.FlurryAgent;
+
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+
+import org.json.JSONObject;
 
 public class MtaActivity extends MainActivity implements OnClickListener{
 
@@ -13,40 +18,27 @@ public class MtaActivity extends MainActivity implements OnClickListener{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
-        
-        context = this;
-
-        setXML();
+        if (Build.VERSION.SDK_INT >= 11) findViewById(R.id.touchImg).setLayerType(View.LAYER_TYPE_HARDWARE, null);
     }
 
     @Override
-    public void onClick(View v){
-        if (v.getId() == R.id.see_map){
-            va.setInAnimation(slideRightIn);
-            va.setOutAnimation(slideRightOut);
-            va.showPrevious();
-        }else if (v.getId() == R.id.see_sched){
-            va.setInAnimation(slideLeftIn);
-            va.setOutAnimation(slideLeftOut);
-            va.showNext();
-        }else if (v.getId() == R.id.back_to_sched){
-            va.setInAnimation(slideRightIn);
-            va.setOutAnimation(slideRightOut);
-            va.showPrevious();
-        }
+    protected String getLineUrl(Line line) {
+        return "";
     }
-    
+
     @Override
-    protected void onStart()
-    {
+    protected String getFlurryApiKey() {
+        return "J8FRNPXSK99CH9VQNT38";
+    }
+
+    @Override
+    protected void onStart(){
     	super.onStart();
     	FlurryAgent.onStartSession(this, "J8FRNPXSK99CH9VQNT38");
     }
      
     @Override
-    protected void onStop()
-    {
+    protected void onStop(){
     	super.onStop();		
     	FlurryAgent.onEndSession(this);
     }

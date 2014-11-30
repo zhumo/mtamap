@@ -22,6 +22,6 @@ public class MtaTouchImageView extends TouchImageView{
 
     @Override
     protected float getDoubleTapScaleFactor() {
-        return 4f;
+        return 5.5f;
     }
 }
