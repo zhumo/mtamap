@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.8.+'
+        classpath 'com.android.tools.build:gradle:1.0.0'
     }
 }
 
@@ -11,29 +11,52 @@ apply plugin: 'android'
 
 dependencies {
     compile 'com.android.support:support-v4:+'
-    compile 'com.android.support:appcompat-v7:19.0.1'
+    compile 'com.android.support:appcompat-v7:21.0.3'
     compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     compile project(':subway_lib')
 }
 
 android {
-    compileSdkVersion 19
-    buildToolsVersion "19.0.1"
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
 
     defaultConfig {
         minSdkVersion 8
-        targetSdkVersion 19
+        targetSdkVersion 21
+    }
+    signingConfigs {
+        signed_config {
+            keyAlias 'mtamap'
+            keyPassword 'mtamapmtamap'
+            storeFile file('~/Dropbox/mainkeystores/keystore1')
+            storePassword 'searcher1'
+        }
     }
 
     sourceSets {
         main {
-            manifest.srcFile 'AndroidManifest.xml'
-            java.srcDirs = ['src']
-            aidl.srcDirs = ['src']
-            renderscript.srcDirs = ['src']
-            resources.srcDirs = ['src']
-            res.srcDirs = ['res']
-	        assets.srcDirs = ['assets']
+            java.srcDirs = ['src/main/java']
+            aidl.srcDirs = ['src/main/java']
+            renderscript.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+        }
+        paid {
+            res.srcDirs = ['src/paid/res']
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.signed_config
+        }
+        debug {
+        }
+    }
+
+    productFlavors {
+        paid {
+            applicationId "com.rndapps.mtamap.paid"
         }
     }
 }
