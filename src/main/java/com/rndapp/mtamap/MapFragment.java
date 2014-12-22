@@ -15,7 +15,14 @@ public class MapFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.fragment_map, container);
+        View root = inflater.inflate(R.layout.fragment_map, null);
+
+        // shows map
+        TouchImageView img = (TouchImageView)root.findViewById(R.id.touchImg);
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inScaled = false;
+        Bitmap subway = BitmapFactory.decodeResource(getResources(), R.drawable.subway, options);
+        img.setImageBitmap(subway);
 
         return root;
     }

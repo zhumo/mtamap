@@ -7,10 +7,10 @@ buildscript {
     }
 }
 
-apply plugin: 'android'
+apply plugin: 'com.android.application'
 
 dependencies {
-    compile 'com.android.support:support-v4:+'
+    compile 'com.android.support:support-v4:21.0.3'
     compile 'com.android.support:appcompat-v7:21.0.3'
     compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     compile project(':subway_lib')
@@ -24,14 +24,6 @@ android {
         minSdkVersion 8
         targetSdkVersion 21
     }
-    signingConfigs {
-        signed_config {
-            keyAlias 'mtamap'
-            keyPassword 'mtamapmtamap'
-            storeFile file('~/Dropbox/mainkeystores/keystore1')
-            storePassword 'searcher1'
-        }
-    }
 
     sourceSets {
         main {
@@ -41,6 +33,9 @@ android {
             resources.srcDirs = ['src/main/java']
             res.srcDirs = ['src/main/res']
         }
+        free{
+            res.srcDirs = ['src/free/res']
+        }
         paid {
             res.srcDirs = ['src/paid/res']
         }
@@ -48,15 +43,17 @@ android {
 
     buildTypes {
         release {
-            signingConfig signingConfigs.signed_config
         }
         debug {
         }
     }
 
     productFlavors {
+        free {
+            applicationId "com.rndapp.mtamap"
+        }
         paid {
-            applicationId "com.rndapps.mtamap.paid"
+            applicationId "com.rndapp.mtamap.paid"
         }
     }
 }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:gravity="center" android:orientation="vertical">
+	
+	<com.google.ads.AdView android:id="@+id/ad"
+		android:layout_width="wrap_content" android:layout_height="wrap_content"
+		ads:adSize="BANNER" ads:adUnitId="a151a6b4967224d" ads:loadAdOnCreate="true"
+		ads:testDevices="TEST_EMULATOR,TEST_DEVICE_ID_GOES_HERE" />
+		
+		<FrameLayout
+            android:id="@+id/fl_fragments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+</LinearLayout>
