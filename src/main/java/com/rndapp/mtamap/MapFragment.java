@@ -19,6 +19,7 @@ public class MapFragment extends Fragment {
 
         // shows map
         TouchImageView img = (TouchImageView)root.findViewById(R.id.touchImg);
+        img.setDoubleTapScaleFactor(6.f);
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inScaled = false;
         Bitmap subway = BitmapFactory.decodeResource(getResources(), R.drawable.subway, options);
