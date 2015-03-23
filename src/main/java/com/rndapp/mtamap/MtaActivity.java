@@ -17,7 +17,6 @@ public class MtaActivity extends ActionBarActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .add(R.id.fl_fragments, new MapFragment(), "Map")
-                .addToBackStack("Map")
                 .setCustomAnimations(R.anim.push_right_in, R.anim.push_left_out)
                 .commit();
     }
