@@ -22,19 +22,28 @@ public class MtaActivity extends ActionBarActivity {
                 .add(R.id.fl_fragments, new MapFragment(), "Map")
                 .setCustomAnimations(R.anim.push_right_in, R.anim.push_left_out)
                 .commit();
+
+        Analytics.activityCreated(this);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        if (!getResources().getString(R.string.version).equals("paid")) {
+            new Nagger(this).startNag();
+        }
     }
     
     @Override
-    protected void onStart()
-    {
+    protected void onStart(){
     	super.onStart();
-    	FlurryAgent.onStartSession(this, "J8FRNPXSK99CH9VQNT38");
+        Analytics.onStart(this);
     }
      
     @Override
-    protected void onStop()
-    {
-    	super.onStop();		
-    	FlurryAgent.onEndSession(this);
+    protected void onStop(){
+    	super.onStop();
+        Analytics.onStop(this);
     }
 }

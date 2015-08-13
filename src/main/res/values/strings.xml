@@ -2,5 +2,6 @@
 <resources>
 
     <string name="app_name">Subway Map: NYC</string>
+    <string name="version">main</string>
 
 </resources>

@@ -25,6 +25,8 @@ public class MapFragment extends Fragment {
         Bitmap subway = BitmapFactory.decodeResource(getResources(), R.drawable.subway, options);
         img.setImageBitmap(subway);
 
+        Analytics.mapShown(getActivity());
+
         return root;
     }
 }
