@@ -1,0 +1,3 @@
+[submodule "subway_lib"]
+	path = subway_lib
+	url = git@github.com:schrockblock/subway_lib.git

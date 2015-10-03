@@ -1,46 +1,71 @@
 buildscript {
     repositories {
         mavenCentral()
-        mavenLocal()
+        maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:0.13.2'
+        classpath 'com.android.tools.build:gradle:1.1.0'
+        classpath 'io.fabric.tools:gradle:1.+'
     }
 }
 
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
 
 repositories {
-    maven { url '/Users/ell/.m2/repository' }
+    maven { url 'https://maven.fabric.io/public' }
 }
+
+
 
 android {
     compileSdkVersion 21
-    buildToolsVersion "21.0.1"
+    buildToolsVersion "21.1.2"
 
     defaultConfig {
-        minSdkVersion 8
+        minSdkVersion 9
         targetSdkVersion 21
     }
 
     sourceSets {
         main {
-            manifest.srcFile 'AndroidManifest.xml'
-            java.srcDirs = ['src']
-            aidl.srcDirs = ['src']
-            renderscript.srcDirs = ['src']
-            resources.srcDirs = ['src']
-            res.srcDirs = ['res']
-	        assets.srcDirs = ['assets']
+            java.srcDirs = ['src/main/java']
+            aidl.srcDirs = ['src/main/java']
+            renderscript.srcDirs = ['src/main/java']
+            resources.srcDirs = ['src/main/java']
+            res.srcDirs = ['src/main/res']
+        }
+        free{
+            res.srcDirs = ['src/free/res']
+        }
+        paid {
+            res.srcDirs = ['src/paid/res']
         }
     }
 
     dependencies {
-        compile('com.rndapp:subway_lib:0.1@aar'){
-            transitive = true
-        }
-        compile 'com.android.support:support-v4:+'
-        compile 'com.android.support:appcompat-v7:21.0.0'
+        compile 'com.android.support:support-v4:21.0.3'
+        compile 'com.android.support:appcompat-v7:21.0.3'
         compile fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+        compile project(':subway_lib')
+        compile('com.crashlytics.sdk.android:crashlytics:2.2.2@aar') {
+            transitive = true;
+        }
+    }
+
+    buildTypes {
+        release {
+        }
+        debug {
+        }
+    }
+
+    productFlavors {
+        free {
+            applicationId "com.rndapp.mtamap"
+        }
+        paid {
+            applicationId "com.rndapp.mtamap.paid"
+        }
     }
 }

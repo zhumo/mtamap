@@ -1,11 +1,12 @@
 .idea/
+.gradle/
 *.eml
 *.iml
-*DS_S*
+.DS_Store
 *~
 out/
 build/
-
+gen/
 /local.properties
 
 /AndroidManifest.xml.bak
