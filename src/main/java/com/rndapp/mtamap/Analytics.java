@@ -4,6 +4,7 @@ import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 
 import com.flurry.android.FlurryAgent;
 import com.parse.Parse;
@@ -30,9 +31,10 @@ public class Analytics {
 
     public static void init(Application application){
         Parse.initialize(application, PARSE_KEY_ONE, PARSE_KEY_TWO);
+        FlurryAgent.init(application, FLURRY_KEY);
     }
 
-    public static void activityCreated(ActionBarActivity activity){
+    public static void activityCreated(AppCompatActivity activity){
         ParseAnalytics.trackAppOpenedInBackground(activity.getIntent());
     }
 
@@ -48,8 +50,6 @@ public class Analytics {
 
         //Flurry
         FlurryAgent.logEvent(STARTED_APP_KEY, values);
-
-        FlurryAgent.onStartSession(context, FLURRY_KEY);
     }
 
     public static void onStop(Context context){
