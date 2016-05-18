@@ -1,9 +1,9 @@
 package com.rndapp.mtamap;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 
-import com.android.volley.RequestQueue;
-import com.android.volley.toolbox.Volley;
+/*import com.android.volley.RequestQueue;
+import com.android.volley.toolbox.Volley;*/
 import com.crashlytics.android.Crashlytics;
 
 import io.fabric.sdk.android.Fabric;
@@ -11,15 +11,18 @@ import io.fabric.sdk.android.Fabric;
 /**
  * Created by ell on 8/5/15.
  */
-public class SubwayApplication  extends Application {
+public class SubwayApplication  extends MultiDexApplication {
     private static SubwayApplication mInstance;
-    private static RequestQueue mRequestQueue;
+    //we have commented RequestQueue Code
+
+    /*private static RequestQueue mRequestQueue;*/
 
     @Override
     public void onCreate() {
         super.onCreate();
+
         mInstance = this;
-        mRequestQueue = Volley.newRequestQueue(this);
+        /*mRequestQueue = Volley.newRequestQueue(this);*/
 
         Fabric.with(this, new Crashlytics());
         Analytics.init(this);
@@ -27,7 +30,7 @@ public class SubwayApplication  extends Application {
 
     public static SubwayApplication getInstance(){return mInstance;};
 
-    public static RequestQueue getRequestQueue() {
+  /*  public static RequestQueue getRequestQueue() {
         return mRequestQueue;
-    }
+    }*/
 }
