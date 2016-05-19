@@ -3,7 +3,6 @@ package com.rndapp.mtamap;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 
 import com.flurry.android.FlurryAgent;
@@ -31,7 +30,7 @@ public class Analytics {
 
     public static void init(Application application){
         Parse.initialize(application, PARSE_KEY_ONE, PARSE_KEY_TWO);
-        FlurryAgent.init(application, FLURRY_KEY);
+        //FlurryAgent.init(application, FLURRY_KEY);
     }
 
     public static void activityCreated(AppCompatActivity activity){
