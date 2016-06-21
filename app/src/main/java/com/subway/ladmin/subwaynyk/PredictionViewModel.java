@@ -1,71 +1,74 @@
 package com.subway.ladmin.subwaynyk;
 
+import android.util.Log;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.Objects;
 
 /**
  * Created by ladmin on 10/06/16.
  */
 public class PredictionViewModel {
 
+    public Date timeOfArrival;
     String routeId;
-    boolean direction;
-    Prediction prediction;
-    Prediction onDeckPrediction;
-    Prediction inTheHolePrediction;
+    int direction;
+    ArrayList<Prediction> sortedPredictionArray = new ArrayList<Prediction>();
+    Prediction prediction = new Prediction();
+    Prediction onDeckPrediction = new Prediction();
+    Prediction inTheHolePrediction = new Prediction();
 
-    PredictionViewModel(String routeId, boolean direction){
+    PredictionViewModel(String routeId, int direction) {
         this.routeId = routeId;
         this.direction = direction;
     }
 
-    public void setupWithPredictions(Prediction predictions){
-
-//        ArrayList<Prediction> persons = …
-//        Stream<Person> personsOver18 = persons.stream().filter(p -> p.getAge() > 18);
+    PredictionViewModel(String routeId, int direction, Date timeOfArrival) {
+        this.routeId = routeId;
+        this.direction = direction;
+        this.timeOfArrival = timeOfArrival;
     }
-//
-//    func setupWithPredictions(predictions: [Prediction]!){
-//
-//
-//        var relevantPredictions = predictions.filter({(prediction) -> Bool in
-//        return prediction.direction == self.direction && prediction.route!.objectId == self.routeId
-//        })
-//
-//        print(relevantPredictions.count)
-//
-//        relevantPredictions.sortInPlace { $0.secondsToArrival < $1.secondsToArrival }
-//        print(relevantPredictions.count)
-//
-//
-//        if relevantPredictions.count > 0 {
-//            prediction = relevantPredictions[0]
-//
-//
-//        }
-//
-//        if relevantPredictions.count > 1 {
-//            onDeckPrediction = relevantPredictions[1]
-//        }
-//
-//        if relevantPredictions.count > 2 {
-//            inTheHolePrediction = relevantPredictions[2]
-//
-//            print(inTheHolePrediction?.timeOfArrival)
-//            print(inTheHolePrediction?.direction)
-//            print(inTheHolePrediction?.route?.objectId)
-//        }
-//    }
-//
-//    override func isEqual(object: AnyObject?) -> Bool {
-//        if let predictionVM = object as? PredictionViewModel {
-//            return self.routeId == predictionVM.routeId && self.direction == predictionVM.direction
-//        }else{
-//            return false
-//        }
-//
-//    }
 
+    public void setupWithPredictions(ArrayList<Prediction> predictionsArray) {
+        ArrayList<Prediction> relevantPredictions = new ArrayList<Prediction>();
+        for (Prediction predict : predictionsArray) {
+            if ((predict.direction == this.direction) && predict.route.objectId.equals(this.routeId)) {
+                relevantPredictions.add(predict);
+            }
+        }
+        sortedPredictionArray = sortList(relevantPredictions);
+        if (sortedPredictionArray.size() > 0) {
+            prediction = sortedPredictionArray.get(0);
+        }
+
+        if (sortedPredictionArray.size() > 1) {
+            onDeckPrediction = sortedPredictionArray.get(1);
+        }
+
+        if (sortedPredictionArray.size() > 2) {
+            inTheHolePrediction = sortedPredictionArray.get(2);
+        }
+    }
+
+    private ArrayList<Prediction> sortList(ArrayList<Prediction> relevantPredictions) {
+        ArrayList<Prediction> innerPrediction = new ArrayList<Prediction>(relevantPredictions);
+        for (int i = 0; i < innerPrediction.size(); i++) {
+            for (int j = i; j < innerPrediction.size(); j++) {
+                Prediction a = innerPrediction.get(i);
+                Prediction b = innerPrediction.get(j);
+                if (a.timeOfArrival.after(b.timeOfArrival)) {
+                    Prediction temp = a;
+                    innerPrediction.set(i, b);
+                    innerPrediction.set(j, temp);
+                }
+            }
+        }
+        return innerPrediction;
+    }
 }
-
-
-

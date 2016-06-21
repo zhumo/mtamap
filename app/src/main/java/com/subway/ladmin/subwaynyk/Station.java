@@ -33,46 +33,38 @@ public class Station implements Serializable {
         this.name = name;
     }
 
-
-    public boolean equal (Station lhs, Station rhs) {
-
-
-        Log.v("*******************************************","");
-        Log.v("Stop Name2", String.valueOf(lhs.name));
-        Log.v("Stop Name3", String.valueOf(rhs.name));
-        Log.v("*******************************************","");
-
+    public boolean equal(Station lhs, Station rhs) {
         String lhsName = lhs.name;
         if (lhsName != null && !lhsName.equals("")) {
             String rhsName = rhs.name;
             if (rhsName != null && !rhsName.equals("")) {
-                if (lhsName.toLowerCase().equals( rhsName.toLowerCase())) {
+                if (lhsName.toLowerCase().equals(rhsName.toLowerCase())) {
                     return true;
                 }
-            String[] lhsArray = lhsName.toLowerCase().split(" ");
-            String[] rhsArray = rhsName.toLowerCase().split(" ");
-            List lhsList = Arrays.asList(lhsArray);
-            List rhsList = Arrays.asList(rhsArray);
+                String[] lhsArray = lhsName.toLowerCase().split(" ");
+                String[] rhsArray = rhsName.toLowerCase().split(" ");
+                List lhsList = Arrays.asList(lhsArray);
+                List rhsList = Arrays.asList(rhsArray);
 
-            if (lhsArray.length == rhsArray.length) {
-                for (String lhsComponent : lhsArray) {
-                    if (!rhsList.contains (lhsComponent)) {
-                        return false;
+                if (lhsArray.length == rhsArray.length) {
+                    for (String lhsComponent : lhsArray) {
+                        if (!rhsList.contains(lhsComponent)) {
+                            return false;
+                        }
                     }
-                }
-                for (String rhsComponent : rhsArray) {
-                    if (!lhsList.contains(rhsComponent)) {
-                        return false;
+                    for (String rhsComponent : rhsArray) {
+                        if (!lhsList.contains(rhsComponent)) {
+                            return false;
+                        }
                     }
+                } else {
+                    return false;
                 }
-            }else{
+                return true;
+            } else {
                 return false;
             }
-            return true;
-            }else{
-                return false;
-            }
-        }else{
+        } else {
             return false;
         }
     }

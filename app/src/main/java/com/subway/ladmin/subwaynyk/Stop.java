@@ -11,15 +11,14 @@ public class Stop implements Serializable {
     public String objectId;
     public String parentId;
 
-   // public Station station;
-
-    public  Stop(String name, String objectId, String parentId) {
+    public Stop(String name, String objectId, String parentId) {
         super();
         this.name = name;
         this.objectId = objectId;
         this.parentId = parentId;
     }
-    public  Stop() {
+
+    public Stop() {
         super();
 
     }
