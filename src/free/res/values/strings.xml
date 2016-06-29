@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="version">free</string>
+    <string name="dbpath">/data/data/com.rndapp.mtamap/databases/</string>
 </resources>
