@@ -30,7 +30,7 @@ public class Analytics {
 
     public static void init(Application application){
         Parse.initialize(application, PARSE_KEY_ONE, PARSE_KEY_TWO);
-        //FlurryAgent.init(application, FLURRY_KEY);
+        FlurryAgent.init(application, FLURRY_KEY);
     }
 
     public static void activityCreated(AppCompatActivity activity){
@@ -48,6 +48,7 @@ public class Analytics {
         ParseAnalytics.trackEventInBackground(STARTED_APP_KEY, values);
 
         //Flurry
+        FlurryAgent.onStartSession(context, FLURRY_KEY);
         FlurryAgent.logEvent(STARTED_APP_KEY, values);
     }
 
