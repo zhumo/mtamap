@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="version">paid</string>
-    <string name="dbpath">/data/data/com.rndapp.mtamap.paid/databases/</string>
-</resources>

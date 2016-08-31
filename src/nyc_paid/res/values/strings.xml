@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Subway:NYC</string>
+    <string name="city">nyc</string>
+    <string name="version">paid</string>
+    <string name="schedules">true</string>
+</resources>
