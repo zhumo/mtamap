@@ -7,6 +7,14 @@
     android:gravity="center"
     android:orientation="vertical">
 
+    <ProgressBar
+        android:id="@+id/pb_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        />
+
     <SearchView
         android:id="@+id/search_view"
         android:layout_width="match_parent"
@@ -28,7 +36,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/search_view"></ListView>
+        android:layout_below="@+id/search_view"
+        android:visibility="invisible"
+        ></ListView>
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/ad"

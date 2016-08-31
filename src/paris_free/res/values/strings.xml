@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Métro:Paris</string>
+    <string name="version">free</string>
+    <string name="city">paris</string>
+    <string name="schedules">true</string>
+</resources>

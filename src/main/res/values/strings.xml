@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <string name="app_name">Subway Map: NYC</string>
     <string name="version">main</string>
-
 </resources>
