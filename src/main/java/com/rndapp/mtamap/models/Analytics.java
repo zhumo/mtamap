@@ -6,8 +6,6 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 
 import com.flurry.android.FlurryAgent;
-import com.parse.Parse;
-import com.parse.ParseAnalytics;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -16,8 +14,6 @@ import java.util.Map;
  * Created by ell on 8/4/15.
  */
 public class Analytics {
-    private static final String PARSE_KEY_ONE = "HyWyfWUGFYQGcdOLnKABphJIZPwpzUrvE21fvUH8";
-    private static final String PARSE_KEY_TWO = "MHPtabvRXUNUSO2kGQoVzPjHUZwjlR9AgxKofF8Q";
     private static final String FLURRY_KEY = "J8FRNPXSK99CH9VQNT38";
 
     private static final String STARTED_APP_KEY = "StartedApp";
@@ -29,12 +25,10 @@ public class Analytics {
     private static final String NAG_APP = "NagApp-v1";
 
     public static void init(Application application){
-        Parse.initialize(application, PARSE_KEY_ONE, PARSE_KEY_TWO);
         FlurryAgent.init(application, FLURRY_KEY);
     }
 
     public static void activityCreated(AppCompatActivity activity){
-        ParseAnalytics.trackAppOpenedInBackground(activity.getIntent());
     }
 
     public static void onStart(Context context){
@@ -43,9 +37,6 @@ public class Analytics {
         //Values
         Map<String, String> values = new HashMap<>();
         values.put(APP_OPENS_KEY, Integer.toString(getNumberOfOpens(context)));
-
-        //Parse
-        ParseAnalytics.trackEventInBackground(STARTED_APP_KEY, values);
 
         //Flurry
         FlurryAgent.onStartSession(context, FLURRY_KEY);
@@ -57,17 +48,12 @@ public class Analytics {
         Map<String, String> values = new HashMap<>();
         values.put(APP_OPENS_KEY, Integer.toString(getNumberOfOpens(context)));
 
-        ParseAnalytics.trackEventInBackground(SESSION_END_KEY, values);
-
         FlurryAgent.logEvent(SESSION_END_KEY, values);
         FlurryAgent.onEndSession(context);
     }
 
     public static void mapShown(Context context){
         //GoogleAnalytics
-
-        //Parse
-        ParseAnalytics.trackEventInBackground(MAP_KEY);
 
         //Flurry
         FlurryAgent.logEvent(MAP_KEY);
@@ -78,9 +64,6 @@ public class Analytics {
         map.put("numberOfAppOpens", numberGroup(Analytics.getNumberOfOpens(context)));
         map.put("response", response);
 
-        //Parse
-        ParseAnalytics.trackEventInBackground(NAG_RATING, map);
-
         //Flurry
         FlurryAgent.logEvent(NAG_RATING, map);
     }
@@ -90,18 +73,12 @@ public class Analytics {
         map.put("numberOfAppOpens", numberGroup(Analytics.getNumberOfOpens(context)));
         map.put("response", response);
 
-        //Parse
-        ParseAnalytics.trackEventInBackground(NAG_APP, map);
-
         //Flurry
         FlurryAgent.logEvent(NAG_APP, map);
     }
 
     public static void schedulesShown(Context context){
         //GoogleAnalytics
-
-        //Parse
-        ParseAnalytics.trackEventInBackground(SCHEDULES_KEY);
 
         //Flurry
         FlurryAgent.logEvent(SCHEDULES_KEY);

@@ -8,7 +8,7 @@ out/
 build/
 gen/
 /local.properties
-
+*.apk
 /AndroidManifest.xml.bak
 
 /local.properties

@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -131,6 +132,7 @@ public class StationDetailActivity extends AppCompatActivity {
     }
 
     class StationTask extends AsyncTask<String, Integer, String> {
+
         @Override
         protected String doInBackground(String... params) {
             stationDetailsList = (ListView) findViewById(R.id.list);

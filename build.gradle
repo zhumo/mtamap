@@ -5,7 +5,7 @@ buildscript {
         maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.1.2'
+        classpath 'com.android.tools.build:gradle:2.2.2'
         classpath 'io.fabric.tools:gradle:1.+'
     }
 }
@@ -17,7 +17,6 @@ repositories {
     mavenCentral()
     jcenter()
     maven { url 'https://maven.fabric.io/public' }
-    maven { url 'https://s3.amazonaws.com/yext-maven-artifacts/' }
     maven { url 'http://maven.localytics.com/public' }
     maven { url "https://jitpack.io" }
 }
@@ -28,7 +27,7 @@ dependencies {
     }
     compile 'com.github.chrisbanes:PhotoView:1.2.6'
     compile 'com.android.support:multidex:1.0.1'
-    compile 'com.android.support:appcompat-v7:24.0.0-alpha2'
+    compile 'com.android.support:appcompat-v7:24.2.0'
     compile 'com.google.android.gms:play-services-ads:8.3.0'
     compile 'com.google.android.gms:play-services-analytics:8.3.0'
     compile 'com.google.android.gms:play-services-gcm:8.3.0'
@@ -40,14 +39,14 @@ dependencies {
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '23.0.0'
+    buildToolsVersion '23.0.3'
 
     defaultConfig {
         minSdkVersion 11
         targetSdkVersion 23
         multiDexEnabled true
-        versionCode 24
-        versionName '3.1.5'
+        versionCode 26
+        versionName '3.2.1'
     }
 
     sourceSets {
@@ -97,6 +96,30 @@ android {
             assets.srcDirs = ['src/paris_map_paid/assets']
             res.srcDirs = ['src/paris_map_paid/res']
         }
+        dcmapfree {
+            manifest.srcFile 'src/dc_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/dc_map_free/res']
+        }
+        berlinmapfree {
+            manifest.srcFile 'src/berlin_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/berlin_map_free/res']
+        }
+        munichmapfree {
+            manifest.srcFile 'src/munich_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/munich_map_free/res']
+        }
+        montrealmapfree {
+            manifest.srcFile 'src/montreal_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/montreal_map_free/res']
+        }
+        madridmapfree {
+            manifest.srcFile 'src/madrid_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/madrid_map_free/res']
+        }
+        londonmapfree {
+            manifest.srcFile 'src/london_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/london_map_free/res']
+        }
     }
 
     buildTypes {
@@ -130,6 +153,24 @@ android {
         }
         parismappaid {
             applicationId "com.thryvinc.parismap.paid"
+        }
+        dcmapfree {
+            applicationId "com.thryvinc.dcmap"
+        }
+        berlinmapfree {
+            applicationId "com.thryvinc.berlinmap"
+        }
+        munichmapfree {
+            applicationId "com.thryvinc.munichmap"
+        }
+        montrealmapfree {
+            applicationId "com.rndapp.montrealmap"
+        }
+        madridmapfree {
+            applicationId "com.rndapp.madridmap"
+        }
+        londonmapfree {
+            applicationId "com.rndapp.londonmap"
         }
     }
 }

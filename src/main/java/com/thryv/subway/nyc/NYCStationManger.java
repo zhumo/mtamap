@@ -3,6 +3,7 @@ package com.thryv.subway.nyc;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
+import android.util.Log;
 
 import com.thryv.subway.abstractions.DBHelper;
 import com.thryv.subway.abstractions.Prediction;
@@ -131,9 +132,13 @@ public class NYCStationManger extends StationManager {
 
     public ArrayList<Stop> stopForStation(Station station) {
         ArrayList<Stop> stopsArrayList = new ArrayList<Stop>();
-        for (Stop parent : station.stops) {
+        if (station.stops.size() > 0){
+            String parentIds = "'" + station.stops.get(0).objectId + "'";
+            for (int i = 1; i<station.stops.size(); i++){
+                parentIds += ",'" + station.stops.get(i).objectId + "'";
+            }
 
-            String queryString = "SELECT stop_name, stop_id FROM stops WHERE parent_station = " + "'" + parent.objectId + "'";
+            String queryString = "SELECT stop_name, stop_id, parent_station FROM stops WHERE parent_station IN (" + parentIds + ")";
             Cursor queryCursor = dbHelper.getSqLiteDatabase().rawQuery(queryString, null);
             queryCursor.moveToFirst();
             while (queryCursor.isAfterLast() == false) {
@@ -141,11 +146,14 @@ public class NYCStationManger extends StationManager {
                 Stop stop = new Stop();
                 stop.name = queryCursor.getString(queryCursor.getColumnIndex(STOP_STOP_NAME));
                 stop.objectId = queryCursor.getString(queryCursor.getColumnIndex(STOP_STOP_ID));
-                stop.parentId = parent.objectId;
+                stop.parentId = queryCursor.getString(queryCursor.getColumnIndex(STOP_PARENT_STATION));
                 stopsArrayList.add(stop);
                 queryCursor.moveToNext();
             }
             queryCursor.close();
+        }
+        for (Stop parent : station.stops) {
+
         }
 
         if (stopsArrayList.size() == 0) {
@@ -182,6 +190,7 @@ public class NYCStationManger extends StationManager {
     }
 
     public ArrayList<Prediction> getPredictions(Station station, Date time) {
+        long t0 = new Date().getTime();
         ArrayList<Prediction> predtionsArrayList = new ArrayList<Prediction>();
         ArrayList<Stop> stopsArrayList = stopForStation(station);
         String stopObjectIds = new String();
@@ -192,9 +201,11 @@ public class NYCStationManger extends StationManager {
         String startTime = dateToTime(time);
         long minutesInMillis = 20 * 60 * 1000;
         String endTimeString = dateToTime(new Date(time.getTime()+minutesInMillis));
+        Log.d("prep", Long.toString(new Date().getTime() - t0));
 
         String queryString = "SELECT trip_id, departure_time FROM stop_times WHERE stop_id IN (" + stopObjectIds + ") AND departure_time BETWEEN " + "'" + startTime + "'" + " AND " + "'" + endTimeString + "'";
         Cursor queryCursor = dbHelper.getSqLiteDatabase().rawQuery(queryString, null);
+        Log.d("query", Long.toString(new Date().getTime() - t0));
         queryCursor.moveToFirst();
         while (queryCursor.isAfterLast() == false) {
             String tripId = queryCursor.getString(queryCursor.getColumnIndex(TRIP_ID));
@@ -236,6 +247,7 @@ public class NYCStationManger extends StationManager {
             queryCursor.moveToNext();
         }
         queryCursor.close();
+        Log.d("done", Long.toString(new Date().getTime() - t0));
         return predtionsArrayList;
     }
 

@@ -4,4 +4,5 @@
     <string name="city">paris</string>
     <string name="schedules">true</string>
     <string name="version">paid</string>
+    <string name="ad_id"></string>
 </resources>

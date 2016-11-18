@@ -1,15 +1,10 @@
 package com.rndapp.mtamap.activities;
 
-import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ListView;
@@ -63,7 +58,6 @@ public class MtaActivity extends AppCompatActivity implements SearchView.OnQuery
 
         Resources resources = getResources();
         boolean hasSchedules = resources.getString(R.string.schedules).equals("true");
-        boolean isNyc = resources.getString(R.string.city).equals("nyc");
         boolean isFree = resources.getString(R.string.version).equals("free");
 
         if (hasSchedules){
@@ -73,10 +67,20 @@ public class MtaActivity extends AppCompatActivity implements SearchView.OnQuery
             searchView.setVisibility(View.GONE);
         }
 
-        if (isNyc){
-            mapImageView.setMaximumScale(7.0f);
-        }else {
-            mapImageView.setMaximumScale(3.0f);
+        switch (resources.getString(R.string.city)){
+            case "london":
+            case "nyc":
+                mapImageView.setMaximumScale(7.0f);
+                break;
+            case "berlin":
+                mapImageView.setMaximumScale(5.0f);
+                break;
+            case "paris":
+                mapImageView.setMaximumScale(5.0f);
+                break;
+            default:
+                mapImageView.setMaximumScale(3.0f);
+                break;
         }
 
         adView = (AdView) findViewById(R.id.ad);
@@ -139,10 +143,10 @@ public class MtaActivity extends AppCompatActivity implements SearchView.OnQuery
         if (!getResources().getString(R.string.version).equals("paid")) {
             String urlPart = "market://details?id=";
             String pkgName = getApplicationContext().getPackageName();
-            if (getResources().getString(R.string.city).equals("paris")){
-                new Nagger(this).startNag(urlPart + pkgName, null);
-            }else {
+            if (getResources().getString(R.string.city).equals("nyc") && getResources().getString(R.string.schedules).equals("true")){
                 new Nagger(this).startNag(urlPart + pkgName, urlPart + pkgName + ".paid");
+            }else {
+                new Nagger(this).startNag(urlPart + pkgName, null);
             }
         }
     }
