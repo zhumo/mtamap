@@ -28,7 +28,7 @@ public class NYCRouteColorManager extends RouteColorManager {
         if ((routeId.equals("B")) || (routeId.equals("D")) || (routeId.equals("F")) || (routeId.equals("M"))) {
             color = Color.parseColor("#F58120");
         }
-        if ((routeId.equals("N")) || (routeId.equals("Q")) || (routeId.equals("R"))) {
+        if (routeId.equals("N") || routeId.equals("Q") || routeId.equals("R") || routeId.equals("W")) {
             color = Color.parseColor("#FFD51D");
         }
         if ((routeId.equals("JZ"))) {

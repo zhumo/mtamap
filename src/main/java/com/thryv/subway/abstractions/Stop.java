@@ -10,6 +10,8 @@ public class Stop implements Serializable {
     public String name;
     public String objectId;
     public String parentId;
+    public double latitude;
+    public double longitude;
 
     public Stop(String name, String objectId, String parentId) {
         super();

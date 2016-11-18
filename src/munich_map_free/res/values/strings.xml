@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Munich Map</string>
+    <string name="city">munich</string>
+    <string name="schedules">false</string>
+    <string name="version">free</string>
+    <string name="ad_id">ca-app-pub-2574276621042285/6302425305</string>
+</resources>

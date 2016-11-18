@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Madrid Map</string>
+    <string name="city">madrid</string>
+    <string name="schedules">false</string>
+    <string name="version">free</string>
+    <string name="ad_id">ca-app-pub-2574276621042285/8047047706</string>
+</resources>
