@@ -1,7 +1,9 @@
 package com.rndapp.mtamap.activities;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -19,7 +21,8 @@ import com.google.android.gms.ads.AdView;
 import com.rndapp.mtamap.R;
 import com.rndapp.mtamap.adapters.StationListAdapter;
 import com.rndapp.mtamap.models.Analytics;
-import com.rndapp.mtamap.models.Nagger;
+import com.rndapp.mtamap.models.NagController;
+import com.rndapp.mtamap.models.Nagtion;
 import com.thryv.subway.abstractions.StationManager;
 import com.thryv.subway.nyc.NYCStationManger;
 import com.thryv.subway.paris.ParisStationManager;
@@ -29,6 +32,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 import io.fabric.sdk.android.Fabric;
+import kotlin.Unit;
+import kotlin.jvm.functions.Function0;
 import uk.co.senab.photoview.PhotoView;
 
 public class MtaActivity extends AppCompatActivity implements SearchView.OnQueryTextListener {
@@ -76,6 +81,9 @@ public class MtaActivity extends AppCompatActivity implements SearchView.OnQuery
                 mapImageView.setMaximumScale(5.0f);
                 break;
             case "paris":
+                mapImageView.setMaximumScale(5.0f);
+                break;
+            case "madrid":
                 mapImageView.setMaximumScale(5.0f);
                 break;
             default:
@@ -140,15 +148,46 @@ public class MtaActivity extends AppCompatActivity implements SearchView.OnQuery
     public void onResume() {
         super.onResume();
 
-        if (!getResources().getString(R.string.version).equals("paid")) {
-            String urlPart = "market://details?id=";
-            String pkgName = getApplicationContext().getPackageName();
+        NagController nagController = new NagController(this);
+
+        Nagtion rateNagtion = new Nagtion();
+        final String urlPart = "market://details?id=";
+        final String pkgName = getApplicationContext().getPackageName();
+        rateNagtion.setDefaultsKey("canNagRating");
+        rateNagtion.setTitle(getResources().getString(R.string.rate_title));
+        rateNagtion.setMessage(getResources().getString(R.string.rate_msg));
+        rateNagtion.setYesText(getResources().getString(R.string.rate_yes_msg));
+        rateNagtion.setMaybeText(getResources().getString(R.string.rate_maybe_msg));
+        rateNagtion.setNoText(getResources().getString(R.string.rate_no_msg));
+        rateNagtion.setYesAction(new Function0<Unit>() {
+            @Override
+            public Unit invoke() {
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(urlPart + pkgName)));
+                return Unit.INSTANCE;
+            }
+        });
+        nagController.getNagtions().add(rateNagtion);
+
+        if (getResources().getString(R.string.version).equals("free")) {
             if (getResources().getString(R.string.city).equals("nyc") && getResources().getString(R.string.schedules).equals("true")){
-                new Nagger(this).startNag(urlPart + pkgName, urlPart + pkgName + ".paid");
-            }else {
-                new Nagger(this).startNag(urlPart + pkgName, null);
+                Nagtion buyNagtion = new Nagtion();
+                buyNagtion.setDefaultsKey("canNagApp");
+                buyNagtion.setTitle(getResources().getString(R.string.paid_title));
+                buyNagtion.setMessage(getResources().getString(R.string.paid_msg));
+                buyNagtion.setYesText(getResources().getString(R.string.rate_yes_msg));
+                buyNagtion.setMaybeText(getResources().getString(R.string.rate_maybe_msg));
+                buyNagtion.setNoText(getResources().getString(R.string.paid_no_msg));
+                buyNagtion.setYesAction(new Function0<Unit>() {
+                    @Override
+                    public Unit invoke() {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(urlPart + pkgName + ".paid")));
+                        return Unit.INSTANCE;
+                    }
+                });
+                nagController.getNagtions().add(buyNagtion);
             }
         }
+        nagController.startNag();
     }
 
     @Override

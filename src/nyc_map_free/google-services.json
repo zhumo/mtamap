@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "74104679722",
+    "firebase_url": "https://nycs-39d2b.firebaseio.com",
+    "project_id": "nycs-39d2b",
+    "storage_bucket": "nycs-39d2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74104679722:android:c4f526f04dc68536",
+        "android_client_info": {
+          "package_name": "com.thryvinc.nycmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74104679722-lu4aschi0qg2eq684ada8crqets4po4u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfiF6J7BReE_voIthVwoT7YKvcSRmJcE4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

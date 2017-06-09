@@ -1,16 +1,20 @@
 buildscript {
+    ext.kotlin_version = '1.1.2-4'
     repositories {
         jcenter()
         mavenCentral()
         maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
+        classpath 'com.android.tools.build:gradle:2.3.3'
         classpath 'io.fabric.tools:gradle:1.+'
+        classpath 'com.google.gms:google-services:3.1.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
 apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
 apply plugin: 'io.fabric'
 
 repositories {
@@ -27,26 +31,28 @@ dependencies {
     }
     compile 'com.github.chrisbanes:PhotoView:1.2.6'
     compile 'com.android.support:multidex:1.0.1'
-    compile 'com.android.support:appcompat-v7:24.2.0'
-    compile 'com.google.android.gms:play-services-ads:8.3.0'
-    compile 'com.google.android.gms:play-services-analytics:8.3.0'
-    compile 'com.google.android.gms:play-services-gcm:8.3.0'
-    compile 'com.localytics.android:library:3.5.+'
+    compile 'com.android.support:appcompat-v7:25.2.0'
+    compile 'com.google.android.gms:play-services-ads:10.2.6'
+    compile 'com.google.android.gms:play-services-analytics:10.2.6'
+    compile 'com.google.android.gms:play-services-gcm:10.2.6'
+    compile 'com.localytics.android:library:3.5+'
     compile 'com.parse:parse-android:1.10.3'
     compile 'com.flurry.android:analytics:6.3.1'
     compile 'de.hdodenhof:circleimageview:2.0.0'
+    compile 'com.google.firebase:firebase-core:10.2.6'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 }
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion '23.0.3'
+    compileSdkVersion 25
+    buildToolsVersion '25.0.2'
 
     defaultConfig {
-        minSdkVersion 11
-        targetSdkVersion 23
+        minSdkVersion 14
+        targetSdkVersion 25
         multiDexEnabled true
-        versionCode 26
-        versionName '3.2.1'
+        versionCode 28
+        versionName '3.2.3'
     }
 
     sourceSets {
@@ -58,65 +64,65 @@ android {
             resources.srcDirs = ['src/main/java']
             res.srcDirs = ['src/main/res']
         }
-        nycfree {
+        nyc_free {
             manifest.srcFile 'src/nyc_free/AndroidManifest.xml'
             assets.srcDirs = ['src/nyc_free/assets']
             res.srcDirs = ['src/nyc_free/res']
         }
-        nycpaid {
+        nyc_paid {
             manifest.srcFile 'src/nyc_paid/AndroidManifest.xml'
             assets.srcDirs = ['src/nyc_paid/assets']
             res.srcDirs = ['src/nyc_paid/res']
         }
-        nycmapfree {
+        nyc_map_free {
             manifest.srcFile 'src/nyc_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/nyc_map_free/res']
         }
-        nycmappaid {
+        nyc_map_paid {
             manifest.srcFile 'src/nyc_map_paid/AndroidManifest.xml'
             res.srcDirs = ['src/nyc_map_paid/res']
         }
-        parisfree {
+        paris_free {
             manifest.srcFile 'src/paris_free/AndroidManifest.xml'
             assets.srcDirs = ['src/paris_free/assets']
             res.srcDirs = ['src/paris_free/res']
         }
-        parispaid {
+        paris_paid {
             manifest.srcFile 'src/paris_paid/AndroidManifest.xml'
             assets.srcDirs = ['src/paris_paid/assets']
             res.srcDirs = ['src/paris_paid/res']
         }
-        parismapfree {
+        paris_map_free {
             manifest.srcFile 'src/paris_map_free/AndroidManifest.xml'
             assets.srcDirs = ['src/paris_map_free/assets']
             res.srcDirs = ['src/paris_map_free/res']
         }
-        parismappaid {
+        paris_map_paid {
             manifest.srcFile 'src/paris_map_paid/AndroidManifest.xml'
             assets.srcDirs = ['src/paris_map_paid/assets']
             res.srcDirs = ['src/paris_map_paid/res']
         }
-        dcmapfree {
+        dc_map_free {
             manifest.srcFile 'src/dc_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/dc_map_free/res']
         }
-        berlinmapfree {
+        berlin_map_free {
             manifest.srcFile 'src/berlin_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/berlin_map_free/res']
         }
-        munichmapfree {
+        munich_map_free {
             manifest.srcFile 'src/munich_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/munich_map_free/res']
         }
-        montrealmapfree {
+        montreal_map_free {
             manifest.srcFile 'src/montreal_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/montreal_map_free/res']
         }
-        madridmapfree {
+        madrid_map_free {
             manifest.srcFile 'src/madrid_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/madrid_map_free/res']
         }
-        londonmapfree {
+        london_map_free {
             manifest.srcFile 'src/london_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/london_map_free/res']
         }
@@ -130,47 +136,49 @@ android {
     }
 
     productFlavors {
-        nycfree {
+        nyc_free {
             applicationId "com.rndapp.mtamap"
         }
-        nycpaid {
+        nyc_paid {
             applicationId "com.rndapp.mtamap.paid"
         }
-        nycmapfree {
+        nyc_map_free {
             applicationId "com.thryvinc.nycmap"
         }
-        nycmappaid {
+        nyc_map_paid {
             applicationId "com.thryvinc.nycmap.paid"
         }
-        parisfree {
+        paris_free {
             applicationId "com.thryvinc.paris_map"
         }
-        parispaid {
+        paris_paid {
             applicationId "com.thryvinc.paris_map.paid"
         }
-        parismapfree {
+        paris_map_free {
             applicationId "com.thryvinc.parismap"
         }
-        parismappaid {
+        paris_map_paid {
             applicationId "com.thryvinc.parismap.paid"
         }
-        dcmapfree {
+        dc_map_free {
             applicationId "com.thryvinc.dcmap"
         }
-        berlinmapfree {
+        berlin_map_free {
             applicationId "com.thryvinc.berlinmap"
         }
-        munichmapfree {
+        munich_map_free {
             applicationId "com.thryvinc.munichmap"
         }
-        montrealmapfree {
+        montreal_map_free {
             applicationId "com.rndapp.montrealmap"
         }
-        madridmapfree {
+        madrid_map_free {
             applicationId "com.rndapp.madridmap"
         }
-        londonmapfree {
+        london_map_free {
             applicationId "com.rndapp.londonmap"
         }
     }
 }
+
+apply plugin: 'com.google.gms.google-services'

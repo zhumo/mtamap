@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "736509789403",
+    "firebase_url": "https://berlin-e4dff.firebaseio.com",
+    "project_id": "berlin-e4dff",
+    "storage_bucket": "berlin-e4dff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:736509789403:android:4bee5512230048dd",
+        "android_client_info": {
+          "package_name": "com.thryvinc.berlinmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "736509789403-fk2so4esaeraah1nm2c0ejj0vc2v2vai.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8S40Ms5YNh5BWzYqbmCC50pRsY3E745o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

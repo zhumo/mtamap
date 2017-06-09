@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "357142028164",
+    "firebase_url": "https://dc-map-86d77.firebaseio.com",
+    "project_id": "dc-map-86d77",
+    "storage_bucket": "dc-map-86d77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357142028164:android:43908ef67cce0622",
+        "android_client_info": {
+          "package_name": "com.thryvinc.dcmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "357142028164-upobpc1sj0ni5sqai2nep9gltkrtu4sp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG5Nuy0g0sjl1OAHfuNACBs6fFw8AbjPU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

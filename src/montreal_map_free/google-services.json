@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "230674032902",
+    "firebase_url": "https://montreal-f7d3e.firebaseio.com",
+    "project_id": "montreal-f7d3e",
+    "storage_bucket": "montreal-f7d3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230674032902:android:ba4d45bb5c67f3c4",
+        "android_client_info": {
+          "package_name": "com.rndapp.montrealmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "230674032902-mgt7bul832ivte93v3mo0olg85vq92c3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJuZ8dDiJC4kGBBKw9a5wSgeRJ6ktuqwM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

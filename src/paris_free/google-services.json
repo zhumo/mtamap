@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "59253958935",
+    "firebase_url": "https://paris-6cd2b.firebaseio.com",
+    "project_id": "paris-6cd2b",
+    "storage_bucket": "paris-6cd2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59253958935:android:c8ad85161ce7d6d9",
+        "android_client_info": {
+          "package_name": "com.thryvinc.parismap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59253958935-o1vkhar3e761sb2iblkqlug415am7phq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPhrea2JnfqhcEl0rBOWfy0-xOSpIc2dw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59253958935:android:461b5f93821cfeb8",
+        "android_client_info": {
+          "package_name": "com.thryvinc.paris_map"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "59253958935-o1vkhar3e761sb2iblkqlug415am7phq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPhrea2JnfqhcEl0rBOWfy0-xOSpIc2dw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

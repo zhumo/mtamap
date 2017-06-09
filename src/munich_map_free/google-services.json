@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "354638118411",
+    "firebase_url": "https://munich-5443f.firebaseio.com",
+    "project_id": "munich-5443f",
+    "storage_bucket": "munich-5443f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354638118411:android:751d296059a46489",
+        "android_client_info": {
+          "package_name": "com.thryvinc.munichmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "354638118411-to5d8toug5cgedvdr1dgu5lio1qseti1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYYr0ek9Eqab-R5Pm8V1bEUAAl6aazf9M"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

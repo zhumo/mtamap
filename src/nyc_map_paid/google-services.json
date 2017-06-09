@@ -1,0 +1,161 @@
+{
+  "project_info": {
+    "project_number": "74104679722",
+    "firebase_url": "https://nycs-39d2b.firebaseio.com",
+    "project_id": "nycs-39d2b",
+    "storage_bucket": "nycs-39d2b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74104679722:android:c4f526f04dc68536",
+        "android_client_info": {
+          "package_name": "com.thryvinc.nycmap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74104679722-lu4aschi0qg2eq684ada8crqets4po4u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfiF6J7BReE_voIthVwoT7YKvcSRmJcE4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74104679722:android:8c94fdbac12ab8e8",
+        "android_client_info": {
+          "package_name": "com.rndapp.mtamap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74104679722-lu4aschi0qg2eq684ada8crqets4po4u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfiF6J7BReE_voIthVwoT7YKvcSRmJcE4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74104679722:android:d7fcce23e0cb5486",
+        "android_client_info": {
+          "package_name": "com.rndapp.mtamap.paid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74104679722-uf6nv6ec96pa3b6f4au8rt4u43bla54f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rndapp.mtamap.paid",
+            "certificate_hash": "0c997e4dbf329ba65b1a175b592a70b0d054c887"
+          }
+        },
+        {
+          "client_id": "74104679722-lu4aschi0qg2eq684ada8crqets4po4u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfiF6J7BReE_voIthVwoT7YKvcSRmJcE4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74104679722-lu4aschi0qg2eq684ada8crqets4po4u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74104679722:android:c80a672296688674",
+        "android_client_info": {
+          "package_name": "com.thryvinc.nycmap.paid"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74104679722-eak40dlo9obbelohfpcsgiinv8r5smc6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.thryvinc.nycmap.paid",
+            "certificate_hash": "0c997e4dbf329ba65b1a175b592a70b0d054c887"
+          }
+        },
+        {
+          "client_id": "74104679722-lu4aschi0qg2eq684ada8crqets4po4u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfiF6J7BReE_voIthVwoT7YKvcSRmJcE4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74104679722-lu4aschi0qg2eq684ada8crqets4po4u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
