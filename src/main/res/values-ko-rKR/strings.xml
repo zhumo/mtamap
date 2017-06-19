@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="version">main</string>
+    <string name="ad_id">ca-app-pub-6130214134299389/8246027751</string>
+    <string name="rate_title">죄송한데요&#8230;</string>
+    <string name="rate_msg">&#8230;하지만이 앱을 평가를 하시겠습니까?</string>
+    <string name="rate_yes_msg">예, 그럼요!</string>
+    <string name="rate_maybe_msg">음&#8230; 좀있다가요.</string>
+    <string name="rate_no_msg">절대로 그렇지 않아요.</string>
+    <string name="paid_title">죄송한데요&#8230;</string>
+    <string name="paid_msg">당신이 app 을 즐기고 있는 것 같으시네요&#8230; 지불한 버전을 사고 소규모 가게 app 개발자를 도와줄수 있겠어요?</string>
+    <string name="paid_no_msg">저는 광고를 누르는 것을 선호합니다.</string>
+</resources>
