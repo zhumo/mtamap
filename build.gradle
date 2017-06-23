@@ -126,6 +126,18 @@ android {
             manifest.srcFile 'src/london_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/london_map_free/res']
         }
+        seoul_map_free {
+            manifest.srcFile 'src/seoul_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/seoul_map_free/res']
+        }
+        tokyo_map_free {
+            manifest.srcFile 'src/tokyo_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/tokyo_map_free/res']
+        }
+        osaka_map_free {
+            manifest.srcFile 'src/osaka_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/osaka_map_free/res']
+        }
     }
 
     buildTypes {
@@ -182,6 +194,12 @@ android {
         }
         seoul_map_free {
             applicationId "com.thryvinc.seoulmap"
+        }
+        tokyo_map_free {
+            applicationId "com.thryvinc.tokyomap"
+        }
+        osaka_map_free {
+            applicationId "com.thryvinc.osakamap"
         }
     }
 }
