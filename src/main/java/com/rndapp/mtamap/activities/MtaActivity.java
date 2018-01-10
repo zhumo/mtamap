@@ -29,6 +29,7 @@ import com.thryv.subway.paris.ParisStationManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Map;
 
 import io.fabric.sdk.android.Fabric;
@@ -84,6 +85,19 @@ public class MtaActivity extends AppCompatActivity implements SearchView.OnQuery
                 mapImageView.setMaximumScale(5.0f);
                 break;
             case "madrid":
+                mapImageView.setMaximumScale(5.0f);
+                break;
+            case "seoul":
+                if (getResources().getConfiguration().locale == Locale.ENGLISH) {
+                    mapImageView.setMaximumScale(9.0f);
+                } else {
+                    mapImageView.setMaximumScale(5.0f);
+                }
+                break;
+            case "tokyo":
+                mapImageView.setMaximumScale(5.0f);
+                break;
+            case "osaka":
                 mapImageView.setMaximumScale(5.0f);
                 break;
             default:

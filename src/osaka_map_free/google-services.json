@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "936738588247",
+    "firebase_url": "https://london-9ccd0.firebaseio.com",
+    "project_id": "london-9ccd0",
+    "storage_bucket": "london-9ccd0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:936738588247:android:bb54d916a6003dab",
+        "android_client_info": {
+          "package_name": "com.thryvinc.osakamap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "936738588247-egglo1hd3sf4f2cobjegh6ej8ug5ltqa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBpTKJCK45oIn2exNqfHU_VgeQboIIHDdw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

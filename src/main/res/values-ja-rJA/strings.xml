@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="version">free</string>
+    <string name="ad_id">ca-app-pub-6130214134299389/8246027751</string>
+    <string name="rate_title">申し訳ありません#8230;</string>
+    <string name="rate_msg">このアプリを評価してください</string>
+    <string name="rate_yes_msg">はい!</string>
+    <string name="rate_maybe_msg">今じゃない</string>
+    <string name="rate_no_msg">いいえ</string>
+    <string name="paid_title">おおい！</string>
+    <string name="paid_msg">あなたはこのアプリが好きなようです。それを購入し、開発者をサポートしてください！</string>
+    <string name="paid_no_msg">今じゃない</string>
+</resources>

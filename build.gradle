@@ -4,9 +4,13 @@ buildscript {
         jcenter()
         mavenCentral()
         maven { url 'https://maven.fabric.io/public' }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.android.tools.build:gradle:3.0.0'
         classpath 'io.fabric.tools:gradle:1.+'
         classpath 'com.google.gms:google-services:3.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -23,6 +27,10 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
     maven { url 'http://maven.localytics.com/public' }
     maven { url "https://jitpack.io" }
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
 }
 
 dependencies {
@@ -45,14 +53,14 @@ dependencies {
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 25
         multiDexEnabled true
-        versionCode 28
-        versionName '3.2.3'
+        versionCode 29
+        versionName '3.2.4'
     }
 
     sourceSets {
@@ -126,6 +134,42 @@ android {
             manifest.srcFile 'src/london_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/london_map_free/res']
         }
+        seoul_map_free {
+            manifest.srcFile 'src/seoul_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/seoul_map_free/res']
+        }
+        beijing_map_free {
+            manifest.srcFile 'src/beijing_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/beijing_map_free/res']
+        }
+        nanjing_map_free {
+            manifest.srcFile 'src/nanjing_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/nanjing_map_free/res']
+        }
+        hong_kong_map_free {
+            manifest.srcFile 'src/hong_kong_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/hong_kong_map_free/res']
+        }
+        shanghai_map_free {
+            manifest.srcFile 'src/shanghai_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/shanghai_map_free/res']
+        }
+        guangzho_map_free {
+            manifest.srcFile 'src/guangzho_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/guangzho_map_free/res']
+        }
+        shenzhen_map_free {
+            manifest.srcFile 'src/shenzhen_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/shenzhen_map_free/res']
+        }
+        tokyo_map_free {
+            manifest.srcFile 'src/tokyo_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/tokyo_map_free/res']
+        }
+        osaka_map_free {
+            manifest.srcFile 'src/osaka_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/osaka_map_free/res']
+        }
     }
 
     buildTypes {
@@ -135,6 +179,7 @@ android {
         }
     }
 
+    flavorDimensions "city"
     productFlavors {
         nyc_free {
             applicationId "com.rndapp.mtamap"
@@ -177,6 +222,33 @@ android {
         }
         london_map_free {
             applicationId "com.rndapp.londonmap"
+        }
+        seoul_map_free {
+            applicationId "com.thryvinc.seoulmap"
+        }
+        beijing_map_free {
+            applicationId "com.thryvinc.beijingmap"
+        }
+        nanjing_map_free {
+            applicationId "com.thryvinc.nanjingmap"
+        }
+        hong_kong_map_free {
+            applicationId "com.thryvinc.hong_kong_map"
+        }
+        shanghai_map_free {
+            applicationId "com.thryvinc.shanghaimap"
+        }
+        guangzho_map_free {
+            applicationId "com.thryvinc.guangzhomap"
+        }
+        shenzhen_map_free {
+            applicationId "com.thryvinc.shenzhenmap"
+        }
+        tokyo_map_free {
+            applicationId "com.thryvinc.tokyomap"
+        }
+        osaka_map_free {
+            applicationId "com.thryvinc.osakamap"
         }
     }
 }
