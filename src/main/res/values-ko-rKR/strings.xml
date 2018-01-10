@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="version">main</string>
+    <string name="version">free</string>
     <string name="ad_id">ca-app-pub-6130214134299389/8246027751</string>
     <string name="rate_title">죄송한데요&#8230;</string>
     <string name="rate_msg">&#8230;하지만이 앱을 평가를 하시겠습니까?</string>

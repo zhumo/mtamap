@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Tokyo Subway Map</string>
+    <string name="app_name">東京地下鉄</string>
     <string name="city">tokyo</string>
     <string name="schedules">false</string>
     <string name="version">free</string>

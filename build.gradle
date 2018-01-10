@@ -4,9 +4,13 @@ buildscript {
         jcenter()
         mavenCentral()
         maven { url 'https://maven.fabric.io/public' }
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.0.0-alpha3'
+        classpath 'com.android.tools.build:gradle:3.0.0'
         classpath 'io.fabric.tools:gradle:1.+'
         classpath 'com.google.gms:google-services:3.1.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
@@ -23,6 +27,10 @@ repositories {
     maven { url 'https://maven.fabric.io/public' }
     maven { url 'http://maven.localytics.com/public' }
     maven { url "https://jitpack.io" }
+    maven {
+        url 'https://maven.google.com/'
+        name 'Google'
+    }
 }
 
 dependencies {
@@ -45,7 +53,7 @@ dependencies {
 
 android {
     compileSdkVersion 25
-    buildToolsVersion '25.0.2'
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         minSdkVersion 14
@@ -130,7 +138,6 @@ android {
             manifest.srcFile 'src/seoul_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/seoul_map_free/res']
         }
-<<<<<<< 2b26caa96af8be5e7f293a3a51453b1dad6537c7
         beijing_map_free {
             manifest.srcFile 'src/beijing_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/beijing_map_free/res']
@@ -154,7 +161,7 @@ android {
         shenzhen_map_free {
             manifest.srcFile 'src/shenzhen_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/shenzhen_map_free/res']
-=======
+        }
         tokyo_map_free {
             manifest.srcFile 'src/tokyo_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/tokyo_map_free/res']
@@ -162,7 +169,6 @@ android {
         osaka_map_free {
             manifest.srcFile 'src/osaka_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/osaka_map_free/res']
->>>>>>> Seoul adjust zoom, added Osaka, Tokyo
         }
     }
 

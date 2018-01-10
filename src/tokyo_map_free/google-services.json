@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "936738588247",
-    "firebase_url": "https://london-9ccd0.firebaseio.com",
-    "project_id": "london-9ccd0",
-    "storage_bucket": "london-9ccd0.appspot.com"
+    "project_number": "49818581920",
+    "firebase_url": "https://tokyo-map-34173.firebaseio.com",
+    "project_id": "tokyo-map-34173",
+    "storage_bucket": "tokyo-map-34173.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:936738588247:android:bb54d916a6003dab",
+        "mobilesdk_app_id": "1:49818581920:android:967b6c3f4956db88",
         "android_client_info": {
           "package_name": "com.thryvinc.tokyomap"
         }
       },
       "oauth_client": [
         {
-          "client_id": "936738588247-egglo1hd3sf4f2cobjegh6ej8ug5ltqa.apps.googleusercontent.com",
+          "client_id": "49818581920-nk5hviti6o6r98ut41mqgjc9i8slkbh2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBpTKJCK45oIn2exNqfHU_VgeQboIIHDdw"
+          "current_key": "AIzaSyDfEREvHyL5J3yMXBvWoUqtPEPNMJhKP_4"
         }
       ],
       "services": {
