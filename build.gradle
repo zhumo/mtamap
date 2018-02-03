@@ -184,17 +184,9 @@ android {
             manifest.srcFile 'src/hangzhou_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/hangzhou_map_free/res']
         }
-        hefei_map_free {
-            manifest.srcFile 'src/hefei_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/hefei_map_free/res']
-        }
         hongkong_map_free {
             manifest.srcFile 'src/hongkong_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/hongkong_map_free/res']
-        }
-        kunming_map_free {
-            manifest.srcFile 'src/kunming_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/kunming_map_free/res']
         }
         nanchang_map_free {
             manifest.srcFile 'src/nanchang_map_free/AndroidManifest.xml'
@@ -208,21 +200,9 @@ android {
             manifest.srcFile 'src/nanning_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/nanning_map_free/res']
         }
-        ningbo_map_free {
-            manifest.srcFile 'src/ningbo_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/ningbo_map_free/res']
-        }
-        qingdao_map_free {
-            manifest.srcFile 'src/qingdao_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/qingdao_map_free/res']
-        }
         shanghai_map_free {
             manifest.srcFile 'src/shanghai_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/shanghai_map_free/res']
-        }
-        shenyang_map_free {
-            manifest.srcFile 'src/shenyang_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/shenyang_map_free/res']
         }
         shenzhen_map_free {
             manifest.srcFile 'src/shenzhen_map_free/AndroidManifest.xml'
@@ -239,22 +219,6 @@ android {
         wuhan_map_free {
             manifest.srcFile 'src/wuhan_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/wuhan_map_free/res']
-        }
-        wuxi_map_free {
-            manifest.srcFile 'src/wuxi_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/wuxi_map_free/res']
-        }
-        xian_map_free {
-            manifest.srcFile 'src/xian_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/xian_map_free/res']
-        }
-        xiamen_map_free {
-            manifest.srcFile 'src/xiamen_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/xiamen_map_free/res']
-        }
-        zhengzhou_map_free {
-            manifest.srcFile 'src/zhengzhou_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/zhengzhou_map_free/res']
         }
     }
 
@@ -348,14 +312,8 @@ android {
         hangzhou_map_free {
             applicationId "com.thryvinc.hangzhou.map"
         }
-        hefei_map_free {
-            applicationId "com.thryvinc.hefei.map"
-        }
         hongkong_map_free {
             applicationId "com.thryvinc.hongkong.map"
-        }
-        kunming_map_free {
-            applicationId "com.thryvinc.kunming.map"
         }
         nanchang_map_free {
             applicationId "com.thryvinc.nanchang.map"
@@ -366,17 +324,8 @@ android {
         nanning_map_free {
             applicationId "com.thryvinc.nanning.map"
         }
-        ningbo_map_free {
-            applicationId "com.thryvinc.ningbo.map"
-        }
-        qingdao_map_free {
-            applicationId "com.thryvinc.qingdao.map"
-        }
         shanghai_map_free {
             applicationId "com.thryvinc.shanghai.map"
-        }
-        shenyang_map_free {
-            applicationId "com.thryvinc.shenyang.map"
         }
         shenzhen_map_free {
             applicationId "com.thryvinc.shenzhen.map"
@@ -389,18 +338,6 @@ android {
         }
         wuhan_map_free {
             applicationId "com.thryvinc.wuhan.map"
-        }
-        wuxi_map_free {
-            applicationId "com.thryvinc.wuxi.map"
-        }
-        xian_map_free {
-            applicationId "com.thryvinc.xian.map"
-        }
-        xiamen_map_free {
-            applicationId "com.thryvinc.xiamen.map"
-        }
-        zhengzhou_map_free {
-            applicationId "com.thryvinc.zhengzhou.map"
         }
     }
 }
