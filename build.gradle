@@ -172,10 +172,6 @@ android {
             manifest.srcFile 'src/chongqing_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/chongqing_map_free/res']
         }
-        dalian_map_free {
-            manifest.srcFile 'src/dalian_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/dalian_map_free/res']
-        }
         fuzhou_map_free {
             manifest.srcFile 'src/fuzhou_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/fuzhou_map_free/res']
@@ -354,9 +350,6 @@ android {
         }
         chongqing_map_free {
             applicationId "com.thryvinc.chongqing.map"
-        }
-        dalian_map_free {
-            applicationId "com.thryvinc.dalian.map"
         }
         fuzhou_map_free {
             applicationId "com.thryvinc.fuzhou.map"
