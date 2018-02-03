@@ -184,10 +184,6 @@ android {
             manifest.srcFile 'src/hangzhou_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/hangzhou_map_free/res']
         }
-        harbin_map_free {
-            manifest.srcFile 'src/harbin_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/harbin_map_free/res']
-        }
         hefei_map_free {
             manifest.srcFile 'src/hefei_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/hefei_map_free/res']
@@ -351,9 +347,6 @@ android {
         }
         hangzhou_map_free {
             applicationId "com.thryvinc.hangzhou.map"
-        }
-        harbin_map_free {
-            applicationId "com.thryvinc.harbin.map"
         }
         hefei_map_free {
             applicationId "com.thryvinc.hefei.map"
