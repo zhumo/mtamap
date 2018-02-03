@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:327155444248:android:769b7d3df2f412eb",
         "android_client_info": {
-          "package_name": "com.thryvinc.beijingmap"
+          "package_name": "com.thryvinc.nanchang.map"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "327155444248-k7icvpprd6k52fv8tg62sr1bra9q78ei.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.thryvinc.beijingmap",
+            "package_name": "com.thryvinc.nanchang.map",
             "certificate_hash": "0c997e4dbf329ba65b1a175b592a70b0d054c887"
           }
         },
@@ -47,189 +47,6 @@
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:327155444248:android:06a1bded6797e3fd",
-        "android_client_info": {
-          "package_name": "com.thryvinc.nanjingmap"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "327155444248-bokontl6vls6m57eqcu87hj6jv4d76vs.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.thryvinc.nanjingmap",
-            "certificate_hash": "0c997e4dbf329ba65b1a175b592a70b0d054c887"
-          }
-        },
-        {
-          "client_id": "327155444248-07elqs5iuti1h7s2283u0ke8q9keu2hi.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDjAxSFYPvdWv41MPc-UE3GEYxIRo72PQ0"
-        },
-        {
-          "current_key": "AIzaSyAuvnYjFALpH2k_1T1FoZik2nbiAQQbpqo"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 2,
-          "other_platform_oauth_client": [
-            {
-              "client_id": "327155444248-07elqs5iuti1h7s2283u0ke8q9keu2hi.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:327155444248:android:302b4a8a940069b8",
-        "android_client_info": {
-          "package_name": "com.thryvinc.hong_kong_map"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "327155444248-07elqs5iuti1h7s2283u0ke8q9keu2hi.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDjAxSFYPvdWv41MPc-UE3GEYxIRo72PQ0"
-        },
-        {
-          "current_key": "AIzaSyAuvnYjFALpH2k_1T1FoZik2nbiAQQbpqo"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:327155444248:android:5ea27b1e9e71860c",
-        "android_client_info": {
-          "package_name": "com.thryvinc.shanghaimap"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "327155444248-07elqs5iuti1h7s2283u0ke8q9keu2hi.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDjAxSFYPvdWv41MPc-UE3GEYxIRo72PQ0"
-        },
-        {
-          "current_key": "AIzaSyAuvnYjFALpH2k_1T1FoZik2nbiAQQbpqo"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:327155444248:android:97e1ce94cdb4c695",
-        "android_client_info": {
-          "package_name": "com.thryvinc.guangzhoumap"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "327155444248-07elqs5iuti1h7s2283u0ke8q9keu2hi.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDjAxSFYPvdWv41MPc-UE3GEYxIRo72PQ0"
-        },
-        {
-          "current_key": "AIzaSyAuvnYjFALpH2k_1T1FoZik2nbiAQQbpqo"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:327155444248:android:2a91a3a79a470690",
-        "android_client_info": {
-          "package_name": "com.thryvinc.shenzhenmap"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "327155444248-07elqs5iuti1h7s2283u0ke8q9keu2hi.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDjAxSFYPvdWv41MPc-UE3GEYxIRo72PQ0"
-        },
-        {
-          "current_key": "AIzaSyAuvnYjFALpH2k_1T1FoZik2nbiAQQbpqo"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
         },
         "ads_service": {
           "status": 2
