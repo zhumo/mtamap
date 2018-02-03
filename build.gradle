@@ -283,6 +283,7 @@ android {
 
     flavorDimensions "city"
     productFlavors {
+        // North America
         nyc_free {
             applicationId "com.rndapp.mtamap"
         }
@@ -295,6 +296,14 @@ android {
         nyc_map_paid {
             applicationId "com.thryvinc.nycmap.paid"
         }
+        dc_map_free {
+            applicationId "com.thryvinc.dcmap"
+        }
+        montreal_map_free {
+            applicationId "com.rndapp.montrealmap"
+        }
+
+        // Europe
         paris_free {
             applicationId "com.thryvinc.paris_map"
         }
@@ -307,17 +316,11 @@ android {
         paris_map_paid {
             applicationId "com.thryvinc.parismap.paid"
         }
-        dc_map_free {
-            applicationId "com.thryvinc.dcmap"
-        }
         berlin_map_free {
             applicationId "com.thryvinc.berlinmap"
         }
         munich_map_free {
             applicationId "com.thryvinc.munichmap"
-        }
-        montreal_map_free {
-            applicationId "com.rndapp.montrealmap"
         }
         madrid_map_free {
             applicationId "com.rndapp.madridmap"
@@ -325,15 +328,21 @@ android {
         london_map_free {
             applicationId "com.rndapp.londonmap"
         }
+
+        // South Korea
         seoul_map_free {
             applicationId "com.thryvinc.seoulmap"
         }
+
+        // Japan
         tokyo_map_free {
             applicationId "com.thryvinc.tokyomap"
         }
         osaka_map_free {
             applicationId "com.thryvinc.osakamap"
         }
+
+        // China
         beijing_map_free {
             applicationId "com.thryvinc.beijing.map"
         }
