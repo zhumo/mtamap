@@ -112,6 +112,9 @@ public class MtaActivity extends AppCompatActivity implements SearchView.OnQuery
             case "shanghai":
                 mapImageView.setMaximumScale(9.0f);
                 break;
+            case "shenzhen":
+                mapImageView.setMaximumScale(5.0f);
+                break;
             default:
                 mapImageView.setMaximumScale(3.0f);
                 break;
