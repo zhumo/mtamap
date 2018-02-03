@@ -138,30 +138,6 @@ android {
             manifest.srcFile 'src/seoul_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/seoul_map_free/res']
         }
-        beijing_map_free {
-            manifest.srcFile 'src/beijing_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/beijing_map_free/res']
-        }
-        nanjing_map_free {
-            manifest.srcFile 'src/nanjing_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/nanjing_map_free/res']
-        }
-        hong_kong_map_free {
-            manifest.srcFile 'src/hong_kong_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/hong_kong_map_free/res']
-        }
-        shanghai_map_free {
-            manifest.srcFile 'src/shanghai_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/shanghai_map_free/res']
-        }
-        guangzho_map_free {
-            manifest.srcFile 'src/guangzho_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/guangzho_map_free/res']
-        }
-        shenzhen_map_free {
-            manifest.srcFile 'src/shenzhen_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/shenzhen_map_free/res']
-        }
         tokyo_map_free {
             manifest.srcFile 'src/tokyo_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/tokyo_map_free/res']
@@ -169,6 +145,122 @@ android {
         osaka_map_free {
             manifest.srcFile 'src/osaka_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/osaka_map_free/res']
+        }
+        beijing_map_free {
+            manifest.srcFile 'src/beijing_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/beijing_map_free/res']
+        }
+        changchun_map_free {
+            manifest.srcFile 'src/changchun_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/changchun_map_free/res']
+        }
+        chengdu_map_free {
+            manifest.srcFile 'src/chengdu_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/chengdu_map_free/res']
+        }
+        chongqing_map_free {
+            manifest.srcFile 'src/chongqing_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/chongqing_map_free/res']
+        }
+        dalian_map_free {
+            manifest.srcFile 'src/dalian_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/dalian_map_free/res']
+        }
+        fuzhou_map_free {
+            manifest.srcFile 'src/fuzhou_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/fuzhou_map_free/res']
+        }
+        guangzhou_map_free {
+            manifest.srcFile 'src/guangzhou_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/guangzhou_map_free/res']
+        }
+        foshan_map_free {
+            manifest.srcFile 'src/foshan_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/foshan_map_free/res']
+        }
+        guiyang_map_free {
+            manifest.srcFile 'src/guiyang_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/guiyang_map_free/res']
+        }
+        hangzhou_map_free {
+            manifest.srcFile 'src/hangzhou_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/hangzhou_map_free/res']
+        }
+        harbin_map_free {
+            manifest.srcFile 'src/harbin_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/harbin_map_free/res']
+        }
+        hefei_map_free {
+            manifest.srcFile 'src/hefei_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/hefei_map_free/res']
+        }
+        hongkong_map_free {
+            manifest.srcFile 'src/hongkong_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/hongkong_map_free/res']
+        }
+        kunming_map_free {
+            manifest.srcFile 'src/kunming_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/kunming_map_free/res']
+        }
+        nanchang_map_free {
+            manifest.srcFile 'src/nanchang_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/nanchang_map_free/res']
+        }
+        nanjing_map_free {
+            manifest.srcFile 'src/nanjing_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/nanjing_map_free/res']
+        }
+        nanning_map_free {
+            manifest.srcFile 'src/nanning_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/nanning_map_free/res']
+        }
+        ningbo_map_free {
+            manifest.srcFile 'src/ningbo_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/ningbo_map_free/res']
+        }
+        qingdao_map_free {
+            manifest.srcFile 'src/qingdao_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/qingdao_map_free/res']
+        }
+        shanghai_map_free {
+            manifest.srcFile 'src/shanghai_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/shanghai_map_free/res']
+        }
+        shengyang_map_free {
+            manifest.srcFile 'src/shengyang_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/shengyang_map_free/res']
+        }
+        shenzhen_map_free {
+            manifest.srcFile 'src/shenzhen_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/shenzhen_map_free/res']
+        }
+        suzhou_map_free {
+            manifest.srcFile 'src/suzhou_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/suzhou_map_free/res']
+        }
+        tianjin_map_free {
+            manifest.srcFile 'src/tianjin_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/tianjin_map_free/res']
+        }
+        wuhan_map_free {
+            manifest.srcFile 'src/wuhan_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/wuhan_map_free/res']
+        }
+        wuxi_map_free {
+            manifest.srcFile 'src/wuxi_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/wuxi_map_free/res']
+        }
+        xian_map_free {
+            manifest.srcFile 'src/xian_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/xian_map_free/res']
+        }
+        xiamen_map_free {
+            manifest.srcFile 'src/xiamen_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/xiamen_map_free/res']
+        }
+        zhengzhou_map_free {
+            manifest.srcFile 'src/zhengzhou_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/zhengzhou_map_free/res']
         }
     }
 
@@ -226,29 +318,98 @@ android {
         seoul_map_free {
             applicationId "com.thryvinc.seoulmap"
         }
-        beijing_map_free {
-            applicationId "com.thryvinc.beijingmap"
-        }
-        nanjing_map_free {
-            applicationId "com.thryvinc.nanjingmap"
-        }
-        hong_kong_map_free {
-            applicationId "com.thryvinc.hong_kong_map"
-        }
-        shanghai_map_free {
-            applicationId "com.thryvinc.shanghaimap"
-        }
-        guangzho_map_free {
-            applicationId "com.thryvinc.guangzhomap"
-        }
-        shenzhen_map_free {
-            applicationId "com.thryvinc.shenzhenmap"
-        }
         tokyo_map_free {
             applicationId "com.thryvinc.tokyomap"
         }
         osaka_map_free {
             applicationId "com.thryvinc.osakamap"
+        }
+        beijing_map_free {
+            applicationId "com.thryvinc.beijing.map"
+        }
+        changchun_map_free {
+            applicationId "com.thryvinc.changchun.map"
+        }
+        chengdu_map_free {
+            applicationId "com.thryvinc.chengdu.map"
+        }
+        chongqing_map_free {
+            applicationId "com.thryvinc.chongqing.map"
+        }
+        dalian_map_free {
+            applicationId "com.thryvinc.dalian.map"
+        }
+        fuzhou_map_free {
+            applicationId "com.thryvinc.fuzhou.map"
+        }
+        guangzhou_map_free {
+            applicationId "com.thryvinc.guangzhou.map"
+        }
+        foshan_map_free {
+            applicationId "com.thryvinc.foshan.map"
+        }
+        guiyang_map_free {
+            applicationId "com.thryvinc.guiyang.map"
+        }
+        hangzhou_map_free {
+            applicationId "com.thryvinc.hangzhou.map"
+        }
+        harbin_map_free {
+            applicationId "com.thryvinc.harbin.map"
+        }
+        hefei_map_free {
+            applicationId "com.thryvinc.hefei.map"
+        }
+        hongkong_map_free {
+            applicationId "com.thryvinc.hongkong.map"
+        }
+        kunming_map_free {
+            applicationId "com.thryvinc.kunming.map"
+        }
+        nanchang_map_free {
+            applicationId "com.thryvinc.nanchang.map"
+        }
+        nanjing_map_free {
+            applicationId "com.thryvinc.nanjing.map"
+        }
+        nanning_map_free {
+            applicationId "com.thryvinc.nanning.map"
+        }
+        ningbo_map_free {
+            applicationId "com.thryvinc.ningbo.map"
+        }
+        qingdao_map_free {
+            applicationId "com.thryvinc.qingdao.map"
+        }
+        shanghai_map_free {
+            applicationId "com.thryvinc.shanghai.map"
+        }
+        shengyang_map_free {
+            applicationId "com.thryvinc.shengyang.map"
+        }
+        shenzhen_map_free {
+            applicationId "com.thryvinc.shenzhen.map"
+        }
+        suzhou_map_free {
+            applicationId "com.thryvinc.suzhou.map"
+        }
+        tianjin_map_free {
+            applicationId "com.thryvinc.tianjin.map"
+        }
+        wuhan_map_free {
+            applicationId "com.thryvinc.wuhan.map"
+        }
+        wuxi_map_free {
+            applicationId "com.thryvinc.wuxi.map"
+        }
+        xian_map_free {
+            applicationId "com.thryvinc.xian.map"
+        }
+        xiamen_map_free {
+            applicationId "com.thryvinc.xiamen.map"
+        }
+        zhengzhou_map_free {
+            applicationId "com.thryvinc.zhengzhou.map"
         }
     }
 }
