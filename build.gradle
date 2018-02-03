@@ -180,10 +180,6 @@ android {
             manifest.srcFile 'src/guangzhou_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/guangzhou_map_free/res']
         }
-        guiyang_map_free {
-            manifest.srcFile 'src/guiyang_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/guiyang_map_free/res']
-        }
         hangzhou_map_free {
             manifest.srcFile 'src/hangzhou_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/hangzhou_map_free/res']
@@ -352,9 +348,6 @@ android {
         }
         guangzhou_map_free {
             applicationId "com.thryvinc.guangzhou.map"
-        }
-        guiyang_map_free {
-            applicationId "com.thryvinc.guiyang.map"
         }
         hangzhou_map_free {
             applicationId "com.thryvinc.hangzhou.map"

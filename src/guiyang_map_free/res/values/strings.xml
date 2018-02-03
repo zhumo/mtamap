@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Beijing Subway Map</string>
-    <string name="city">beijing</string>
-    <string name="schedules">false</string>
-    <string name="version">free</string>
-    <string name="ad_id">ca-app-pub-2574276621042285/5850460907</string>
-</resources>
