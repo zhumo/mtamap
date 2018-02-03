@@ -196,10 +196,6 @@ android {
             manifest.srcFile 'src/nanjing_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/nanjing_map_free/res']
         }
-        nanning_map_free {
-            manifest.srcFile 'src/nanning_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/nanning_map_free/res']
-        }
         shanghai_map_free {
             manifest.srcFile 'src/shanghai_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/shanghai_map_free/res']
@@ -320,9 +316,6 @@ android {
         }
         nanjing_map_free {
             applicationId "com.thryvinc.nanjing.map"
-        }
-        nanning_map_free {
-            applicationId "com.thryvinc.nanning.map"
         }
         shanghai_map_free {
             applicationId "com.thryvinc.shanghai.map"
