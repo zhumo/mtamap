@@ -72,6 +72,8 @@ android {
             resources.srcDirs = ['src/main/java']
             res.srcDirs = ['src/main/res']
         }
+
+        // North America
         nyc_free {
             manifest.srcFile 'src/nyc_free/AndroidManifest.xml'
             assets.srcDirs = ['src/nyc_free/assets']
@@ -90,6 +92,16 @@ android {
             manifest.srcFile 'src/nyc_map_paid/AndroidManifest.xml'
             res.srcDirs = ['src/nyc_map_paid/res']
         }
+        dc_map_free {
+            manifest.srcFile 'src/dc_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/dc_map_free/res']
+        }
+        montreal_map_free {
+            manifest.srcFile 'src/montreal_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/montreal_map_free/res']
+        }
+
+        // Europe
         paris_free {
             manifest.srcFile 'src/paris_free/AndroidManifest.xml'
             assets.srcDirs = ['src/paris_free/assets']
@@ -110,10 +122,6 @@ android {
             assets.srcDirs = ['src/paris_map_paid/assets']
             res.srcDirs = ['src/paris_map_paid/res']
         }
-        dc_map_free {
-            manifest.srcFile 'src/dc_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/dc_map_free/res']
-        }
         berlin_map_free {
             manifest.srcFile 'src/berlin_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/berlin_map_free/res']
@@ -121,10 +129,6 @@ android {
         munich_map_free {
             manifest.srcFile 'src/munich_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/munich_map_free/res']
-        }
-        montreal_map_free {
-            manifest.srcFile 'src/montreal_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/montreal_map_free/res']
         }
         madrid_map_free {
             manifest.srcFile 'src/madrid_map_free/AndroidManifest.xml'
@@ -134,10 +138,14 @@ android {
             manifest.srcFile 'src/london_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/london_map_free/res']
         }
+
+        // South Korea
         seoul_map_free {
             manifest.srcFile 'src/seoul_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/seoul_map_free/res']
         }
+
+        // Japan
         tokyo_map_free {
             manifest.srcFile 'src/tokyo_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/tokyo_map_free/res']
@@ -146,6 +154,8 @@ android {
             manifest.srcFile 'src/osaka_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/osaka_map_free/res']
         }
+
+        // China
         beijing_map_free {
             manifest.srcFile 'src/beijing_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/beijing_map_free/res']
@@ -226,9 +236,9 @@ android {
             manifest.srcFile 'src/shanghai_map_free/AndroidManifest.xml'
             res.srcDirs = ['src/shanghai_map_free/res']
         }
-        shengyang_map_free {
-            manifest.srcFile 'src/shengyang_map_free/AndroidManifest.xml'
-            res.srcDirs = ['src/shengyang_map_free/res']
+        shenyang_map_free {
+            manifest.srcFile 'src/shenyang_map_free/AndroidManifest.xml'
+            res.srcDirs = ['src/shenyang_map_free/res']
         }
         shenzhen_map_free {
             manifest.srcFile 'src/shenzhen_map_free/AndroidManifest.xml'
@@ -384,8 +394,8 @@ android {
         shanghai_map_free {
             applicationId "com.thryvinc.shanghai.map"
         }
-        shengyang_map_free {
-            applicationId "com.thryvinc.shengyang.map"
+        shenyang_map_free {
+            applicationId "com.thryvinc.shenyang.map"
         }
         shenzhen_map_free {
             applicationId "com.thryvinc.shenzhen.map"
